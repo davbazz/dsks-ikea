@@ -3,8 +3,8 @@ import "../css/Carousel.css";
 
 const Carousel = ({ product }) => {
     let productImage;
-    if (product.image !== undefined) {
-        productImage = product.image.fields.file.url
+    if (product.path !== undefined) {
+        productImage = product.path
     } else {
         productImage = "Sorry, no picture yet"
     }
@@ -14,8 +14,8 @@ const Carousel = ({ product }) => {
         <div>
             <div className="productCard">
                 <img src={productImage} />
-                <h2><a className="link-yellow" href="#">{product.title}</a></h2>
-                <p>{product.description}</p>
+                <h2><a className="link-yellow" href="#">{product.order}</a></h2>
+                <p>{product.category}</p>
             </div>
         </div>
     )
