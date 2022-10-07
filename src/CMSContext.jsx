@@ -20,10 +20,10 @@ const CMSContextProvider = (props) => {
   useEffect(() => {
     if (getClient) {
       const goAsync = async () => {
-        const _categories = await fetchFromCMS("category", getClient);
+        const _categories = await fetchFromCMS("cards", getClient);
         setCategories(_categories);
-        const _products = await fetchFromCMS("product", getClient);
-        setProducts(_products);
+        // const _products = await fetchFromCMS("product", getClient);
+        // setProducts(_products);
       };
       goAsync();
     }
@@ -32,6 +32,7 @@ const CMSContextProvider = (props) => {
   return (
     <CMSContext.Provider
       value={{
+        test: true,
         getCategories,
         getProducts
       }}
@@ -46,7 +47,7 @@ export default CMSContextProvider;
 async function fetchFromCMS(contentType, client) {
   try {
     const entries = await client.getEntries({
-      content_type: "category", // <<<<< dynamically get content based on type
+      content_type: contentType, // <<<<< dynamically get content based on type
       select: "fields"
     });
     return entries;
