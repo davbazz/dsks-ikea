@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import CMSContext from '../CMSContext';
+import {CMSContext} from '../CMSContext';
 import "../css/Cards.css"
 
 function Categories() {
