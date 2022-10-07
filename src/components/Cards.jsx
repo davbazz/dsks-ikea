@@ -40,39 +40,6 @@ function CardsItems() {
             <li className="cards_items">
                 <img></img>
             </li> 
-            <li className="cards_items">
-                <img></img>
-            </li>
-            <li className="cards_items">
-                <img></img>
-            </li>
-            <li className="cards_items">
-                <img></img>
-            </li>
-            <li className="cards_items">
-                <img></img>
-            </li>
-            <li className="cards_items">
-                <img></img>
-            </li>
-            <li className="cards_items">
-                <img></img>
-            </li>
-            <li className="cards_items">
-                <img></img>
-            </li>
-            <li className="cards_items">
-                <img></img>
-            </li>
-            <li className="cards_items">
-                <img></img>
-            </li>
-            <li className="cards_items">
-                <img></img>
-            </li>
-            <li className="cards_items">
-                <img></img>
-            </li>
         </ul>
     )
 }
