@@ -1,6 +1,5 @@
 .logo {
-    width: 50px;
-    margin-top: 15px;
+    width: 77px;
 }
 
 ul {
@@ -62,10 +61,31 @@ ul {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    margin-top: 12px;
+}
+
+.dropdown:hover .dropdown-content ul {
+    width: 250px;
+    height: 100%;
+    margin-top: 5px;
+}
+
+.dropdown:hover .dropdown-content ul li {
+    margin-top: 5px;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content ul li:hover {
+    color: blue;
+}
+
+.dropdown:hover .dropdown-content ul li:nth-child(odd) {
+    background-color: #D3D3D3;
 }
 
 .shopping-cart {
     width: 35px;
+    margin-bottom: -10px;
 }
 
 .nav>.nav-header {
@@ -97,7 +117,9 @@ ul {
     cursor: pointer;
 }
 
-.nav>.nav-links>a:hover {}
+.nav>.nav-links>a:hover {
+    color: blue;
+}
 
 .nav>#nav-check {
     display: none;

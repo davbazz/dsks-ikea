@@ -17,9 +17,9 @@ function App() {
 
 	return (
 		<div className="App">
-			<h1>Welcome to DSKS</h1>
-			{/* <Header /> */}
-			{/* <Hero /> */}
+			<Header />
+			<Hero />
+			<h3>Discover our Products</h3>
 			<div className="productCarousel">
 				{products.map((product, index) => <Carousel key={index} product={product} />)}
 			</div>
