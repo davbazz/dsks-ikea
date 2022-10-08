@@ -17,7 +17,7 @@ function App() {
 
 	return (
 		<div className="App">
-			<Header />
+			<Header products={products} />
 			<Hero />
 			<h3>Discover our Products</h3>
 			<div className="productCarousel">

@@ -1,3 +1,9 @@
+:root {
+    --sky-blue: #87CEEB;
+    --white: #fff;
+    --black: #000;
+}
+
 .logo {
     width: 77px;
 }
@@ -14,7 +20,7 @@ ul {
 .signup {
     width: 90px;
     height: 40px;
-    background: white;
+    background: var(--white);
     cursor: pointer;
     margin-left: 15px;
 }
@@ -27,21 +33,21 @@ ul {
     width: 90px;
     height: 40px;
     border-radius: 0px;
-    background-color: white;
+    background-color: var(--white);
     cursor: pointer;
 }
 
 .login:hover,
 .signup:hover {
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 #search {
     max-width: 100%;
     width: 350px;
     height: 40px;
-    border: 2px solid black;
+    border: 2px solid var(--black);
 }
 
 .dropdown {
@@ -72,11 +78,11 @@ ul {
 
 .dropdown:hover .dropdown-content ul li {
     margin-top: 5px;
-    color: black;
+    color: var(--black);
 }
 
 .dropdown:hover .dropdown-content ul li:hover {
-    color: blue;
+    color: var(--sky-blue);
 }
 
 .dropdown:hover .dropdown-content ul li:nth-child(odd) {
@@ -118,7 +124,7 @@ ul {
 }
 
 .nav>.nav-links>a:hover {
-    color: blue;
+    color: var(--sky-blue);
 }
 
 .nav>#nav-check {
@@ -154,7 +160,7 @@ ul {
         display: block;
         width: 25px;
         height: 10px;
-        border-top: 2px solid white;
+        border-top: 2px solid var(--white);
     }
 
     .nav>.nav-links {

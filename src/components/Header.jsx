@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/Header.css"
 
-function Header() {
+const Header = ({ products }) => {
     return (
         <>
             <div className="nav">
@@ -21,15 +21,9 @@ function Header() {
                 <div className="nav-links">
                     <a className='dropdown'>
                         <span>Products</span>
-                        <div class="dropdown-content">
-                            <ul>
-                                <li>Furniture</li>
-                                <li>Textiles</li>
-                                <li>Decoration</li>
-                                <li>Lighting</li>
-                                <li>Kitchen & appliances</li>
-                                <li>Smart home</li>
-                                <li>Beds & mattresses</li>
+                        <div className="dropdown-content">
+                            <ul id="category-menu">
+                                {products.map((product, index) => <li key={index}>{product.category}</li> )}
                             </ul>
                         </div>
                     </a>
