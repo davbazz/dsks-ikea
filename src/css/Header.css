@@ -1,0 +1,163 @@
+.logo {
+    width: 50px;
+    margin-top: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+#logo-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.signup {
+    width: 90px;
+    height: 40px;
+    background: white;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#logo-section li {
+    margin-right: 20px;
+}
+
+.login {
+    width: 90px;
+    height: 40px;
+    border-radius: 0px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.login:hover,
+.signup:hover {
+    background-color: black;
+    color: white;
+}
+
+#search {
+    max-width: 100%;
+    width: 350px;
+    height: 40px;
+    border: 2px solid black;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.shopping-cart {
+    width: 35px;
+}
+
+.nav>.nav-header {
+    display: inline;
+}
+
+.nav>.nav-header>.nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #000;
+    padding: 10px;
+}
+
+.nav>.nav-btn {
+    display: none;
+}
+
+.nav>.nav-links {
+    display: inline;
+    float: none;
+    margin-left: 50px;
+}
+
+.nav>.nav-links>a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.nav>.nav-links>a:hover {}
+
+.nav>#nav-check {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .signup {
+        margin-left: 0;
+    }
+
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+        margin-top: 15px;
+    }
+
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: #000;
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid white;
+    }
+
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 66px;
+        left: 0px;
+    }
+
+    .nav>.nav-links>a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 66px);
+        overflow-y: auto;
+    }
+}
