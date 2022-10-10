@@ -23,7 +23,7 @@ const Header = ({ products }) => {
                         <span>Products</span>
                         <div className="dropdown-content">
                             <ul id="category-menu">
-                                {products.map((product, index) => <li key={index}>{product.category}</li> )}
+                                {products.map((product, index) => <li key={index}>{product.category}</li>)}
                             </ul>
                         </div>
                     </a>

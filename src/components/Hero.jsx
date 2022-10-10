@@ -3,11 +3,9 @@ import "../css/Hero.css"
 
 function Hero() {
     return (
-        <>
-            <div id="hero-section">
-                <img src="src/img/hero.jpeg" alt="" />
-            </div>
-        </>
+        <div id="hero-section">
+            <img src="src/img/hero.jpeg" alt="" />
+        </div>
     )
 }
 

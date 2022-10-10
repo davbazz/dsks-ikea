@@ -153,14 +153,14 @@ ul {
 
     .nav>.nav-btn>label:hover,
     .nav #nav-check:checked~.nav-btn>label {
-        background-color: #000;
+        cursor: pointer;
     }
 
     .nav>.nav-btn>label>span {
         display: block;
-        width: 25px;
-        height: 10px;
-        border-top: 2px solid var(--white);
+        width: 27px;
+        height: 8px;
+        border-top: 3px solid var(--black);
     }
 
     .nav>.nav-links {

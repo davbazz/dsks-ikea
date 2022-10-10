@@ -10,13 +10,11 @@ const Carousel = ({ product }) => {
     }
 
     return (
-        <>
-            <div className="productCard">
-                <img src={productImage} />
-                <h2><a className="link-yellow" href="#">{product.category}</a></h2>
-                <p>{product.title}</p>
-            </div>
-        </>
+        <div className="productCard">
+            <img src={productImage} />
+            <h2><a className="link-yellow" href="#">{product.category}</a></h2>
+            <p>{product.title}</p>
+        </div>
     )
 }
 
