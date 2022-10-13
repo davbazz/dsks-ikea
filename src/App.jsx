@@ -10,7 +10,7 @@ function App() {
 	return (
 		<div className="App">
 			<h1>Welcome to DSKS</h1>
-			{/* <Header /> */}
+			<Header />
 			{/* <Hero /> */}
 			<Carousel />
 			{/*<div className="productCarousel">
