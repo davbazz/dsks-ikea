@@ -17,7 +17,7 @@ function App() {
 				{products.map((product, index) => <Carousel key={index} product={product} />)}
 			</div>*/}
 			<Categories />
-			{/* <Footer /> */}
+			 <Footer /> 
 		</div>
 	)
 }
