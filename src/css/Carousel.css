@@ -27,7 +27,7 @@ figure * { display: block; }
 h1 { font: 700 2rem/1.2 "Noto Sans"; color:hsl(200, 100%, 10%) } 
 h2 { font: 700 1.35rem/1.2 "Noto Sans"; color:hsl(200, 100%, 10%, .8) }
 h3 { font: 700 1.0rem/1.2 "Noto Sans"; color:hsla(200, 100%, 10%, .7) }
-p { font: 400 1.0rem/1.5 "Noto Sans"; color:hsl(200, 100%, 10%) }
+p { font: 400 0.9rem/1.4 "Noto Sans"; color:hsla(200, 100%, 10%, .8) }
 
 a:hover.link-yellow {box-shadow: inset 0 -0.4em hsl(51, 97%, 53%);}
 
@@ -58,7 +58,11 @@ a:hover.link-yellow {box-shadow: inset 0 -0.4em hsl(51, 97%, 53%);}
 }
 
 .productCard {
-    padding: .5rem;
+    padding: 0.5rem;
+}
+
+.productCard h3 {
+    padding-bottom: 0.5rem;
 }
 
 img {

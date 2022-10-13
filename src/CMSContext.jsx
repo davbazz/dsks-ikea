@@ -5,7 +5,7 @@ export const CMSContext = createContext();
 
 const CMSContextProvider = (props) => {
   const [getCategories, setCategories] = useState([]);
-  const [getProducts, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
@@ -15,9 +15,9 @@ const CMSContextProvider = (props) => {
       host: "preview.contentful.com"
     });
     client.getEntries({
-      content_type: 'cards', // <<<<< dynamically get content based on type
+      content_type: 'products', // <<<<< dynamically get content based on type
       select: "fields"
-    }).then(response => setCards(response.items))
+    }).then(response => setProducts(response.items))
   }, []);
 
 
@@ -27,7 +27,7 @@ const CMSContextProvider = (props) => {
         test: true,
         getCategories,
         setCategories,
-        getProducts,
+        products,
         setProducts,
         cards,
         setCards
@@ -52,3 +52,4 @@ async function fetchFromCMS(contentType, client) {
     throw new Error("could get content :O type = " + contentType)
   }
 }
+

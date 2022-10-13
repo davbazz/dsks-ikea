@@ -3,21 +3,23 @@ import { CMSContext } from '../CMSContext';
 import "../css/Carousel.css";
 
 function Carousel() {
-    const { cards, getCategories } = useContext(CMSContext);
-    console.log(getCategories)
-
+    const { products } = useContext(CMSContext);
+    console.log(products)
 
     return (
-        <section className="cards">
-            <h2 className="cards_header">Products</h2>
-            <div>
-                {cards.map(c => <li key={c.sys.id}>
-                    {c.fields.category}
-                    <img src={c.fields.path} />
-                </li>)}
+        <section>
+            <h2>Products</h2>
+            <div className="productCarousel">
+                {products.map(p => <div className="productCard" key={p.sys.id}>
+                    <h3>{p.fields.productName}</h3>
+                    <a href="#"><img src={p.fields.productPicture.fields.file.url} />
+                        <p>{p.fields.productDescription}</p>
+                    </a>
+                </div>)}
             </div>
         </section>
     )
 }
 
 export default Carousel
+
