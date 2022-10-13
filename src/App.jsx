@@ -11,11 +11,8 @@ function App() {
 		<div className="App">
 			<h1>Welcome to DSKS</h1>
 			<Header />
-			{/* <Hero /> */}
+			<Hero />
 			<Carousel />
-			{/*<div className="productCarousel">
-				{products.map((product, index) => <Carousel key={index} product={product} />)}
-			</div>*/}
 			<Categories />
 			 <Footer /> 
 		</div>
