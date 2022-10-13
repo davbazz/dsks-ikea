@@ -12,18 +12,14 @@ const Footer = () => {
                      lots more to help bring your ideas to <br></br>
                      life. All for free.</p>
                   <button>Join or Log in</button>
-                  <h4>Join IKEA Business Network</h4> 
-                  <p>Enjoy a number of unique benefits to <br></br>
-                     create a better life at work.</p>
-                  <button>Join or Log in</button>
                 </div>
                   <div className="row">
                 <div className="col"> 
                   <h4>Services</h4>
                   <ul className="list-unstyled"> 
                   <li>Circular</li>
-                  <li>Planning services</li>
-                  <li>Interior design services</li>
+                  <li>Planning</li>
+                  <li>Interior design</li>
                   <li>Delivery</li>
                   <li>Click & collect</li>
                   <li>Assembly</li>
@@ -36,8 +32,7 @@ const Footer = () => {
                   <h4>Help</h4>
                   <ul className="list-unstyled"> 
                   <li>Track my order</li>
-                  <li>Customer services</li>
-                  <li>Give us your feedback</li>
+                  <li>Feedback</li>
                   <li>FAQs</li>
                   <li>Planners</li>
                   <li>Producr recalls</li>
@@ -52,7 +47,7 @@ const Footer = () => {
                   <li>Carees at IKEA</li>
                   <li>IKEA group</li>
                   <li>IKEA food</li>
-                  <li>IKEA for business</li>
+                  <li>IKEA business</li>
                   <li>IKEA Foundation</li>
                   <li>Sustainability</li>
                   <li>Newsroom</li>
@@ -74,7 +69,7 @@ const Footer = () => {
              <hr/>
              <div className="row">
                 <p className="col-small"> 
-                  &copy;{new Date().getFullYear()} Privacy Policy | All right reserved | Cookie Policy | Cookie settings | Terms & Conditions | Responsible Disclosure policy | Modern Slavery Statement | Accessibility
+                  &copy;{new Date().getFullYear()} Privacy Policy | All right reserved | Cookie Policy | Cookie settings | Terms & Conditions | Responsible Disclosure policy | Accessibility
                 </p> 
                </div>
            </div>

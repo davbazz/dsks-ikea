@@ -5,12 +5,11 @@
     padding: 3rem 1.5rem;
     display: flex;
     justify-content: center;
-    border-radius: 5px;
 }
-.button{ 
+button{ 
     background-color: black;
     color: white;
-    border-radius: 30% ;
+    border-radius: 5% ;
     
 }
 .row{ 
@@ -19,9 +18,15 @@
     padding-bottom: 15px;
 }
 .col{ 
-    justify-content: space-between;
+    justify-content: flex;
+    margin: 0 50px;
 }
-.container{ 
+.page-container{ 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+.content-wrap{ 
+    flex:1;
 }
