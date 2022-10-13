@@ -6,7 +6,7 @@ export const CMSContext = createContext();
 const CMSContextProvider = (props) => {
   const [getCategories, setCategories] = useState([]);
   const [getProducts, setProducts] = useState([]);
-  const [getClient, setClient] = useState();
+  const [cards, setCards] = useState([]);
 
   useEffect(() => {
     const client = createClient({
@@ -14,27 +14,23 @@ const CMSContextProvider = (props) => {
       accessToken: "SwOEVmSrIMdvgsTNt1MCBwzj6tp3Y9ZACPYPMwEyRe8",
       host: "preview.contentful.com"
     });
-    setClient(client);
+    client.getEntries({
+      content_type: 'cards', // <<<<< dynamically get content based on type
+      select: "fields"
+    }).then(response => setCards(response.items))
   }, []);
 
-  useEffect(() => {
-    if (getClient) {
-      const goAsync = async () => {
-        const _categories = await fetchFromCMS("cards", getClient);
-        setCategories(_categories);
-        // const _products = await fetchFromCMS("product", getClient);
-        // setProducts(_products);
-      };
-      goAsync();
-    }
-  }, [getClient]);
 
   return (
     <CMSContext.Provider
       value={{
         test: true,
         getCategories,
-        getProducts
+        setCategories,
+        getProducts,
+        setProducts,
+        cards,
+        setCards
       }}
     >
       {props.children}
@@ -53,6 +49,6 @@ async function fetchFromCMS(contentType, client) {
     return entries;
   } catch (error) {
     console.log(error)
-    throw new Error ("could get content :O type = " + contentType)
+    throw new Error("could get content :O type = " + contentType)
   }
 }

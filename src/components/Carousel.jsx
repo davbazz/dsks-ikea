@@ -1,23 +1,22 @@
-import React from "react";
+import { useContext } from "react";
+import { CMSContext } from '../CMSContext';
 import "../css/Carousel.css";
 
-const Carousel = ({ product }) => {
-    let productImage;
-    if (product.path !== undefined) {
-        productImage = product.path
-    } else {
-        productImage = "Sorry, no picture yet"
-    }
-    // console.log(product.productPicture)
+function Carousel() {
+    const { cards, getCategories } = useContext(CMSContext);
+    console.log(getCategories)
+
 
     return (
-        <div>
-            <div className="productCard">
-                <img src={productImage} />
-                <h2><a className="link-yellow" href="#">{product.order}</a></h2>
-                <p>{product.category}</p>
+        <section className="cards">
+            <h2 className="cards_header">Products</h2>
+            <div>
+                {cards.map(c => <li key={c.sys.id}>
+                    {c.fields.category}
+                    <img src={c.fields.path} />
+                </li>)}
             </div>
-        </div>
+        </section>
     )
 }
 

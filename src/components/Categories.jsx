@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
-import {CMSContext} from '../CMSContext';
+import { CMSContext } from '../CMSContext';
 import "../css/Cards.css"
 
 function Categories() {
-    const getCategories  = useContext(CMSContext);
+    const getCategories = useContext(CMSContext);
     console.log(getCategories)
     return (
         <section className="cards">
             <h2 className="cards_header">
                 More ideas and inspiration from your great value furniture store
             </h2>
-            <CardsCategory/>
+            <CardsCategory />
         </section>
     )
 }
