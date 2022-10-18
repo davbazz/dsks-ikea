@@ -8,13 +8,6 @@ import './App.css'
 
 function App() {
 	return (
-<<<<<<< Updated upstream
-		<div className="App">
-			<Header />
-			<Hero />
-			<Carousel />
-			<Categories />
-=======
 		<div>
 			<div>
 				<Header />
@@ -28,7 +21,6 @@ function App() {
 			<div className="wrapper padding-top">
 				<Categories />
 			</div>
->>>>>>> Stashed changes
 			<Footer />
 		</div>
 	)

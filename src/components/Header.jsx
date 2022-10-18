@@ -44,30 +44,22 @@ function Header() {
                     <a>Offers</a>
                     <a>Best Seller</a>
                     <a href="#"><input id='search' type="text" placeholder="Search" /></a>
-<<<<<<< Updated upstream
                     <input onClick={() => toggleShow(!show)} className='login' type="button" value='LogIn' />
                     {show && <div id="myModal" class="modal">
-                                    <div class="modal-content">
-                                        <span class="close">&times;</span>
-                                        <p>{
-                                            currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
-                                        }</p>
-                                    </div>
-                             </div>}
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p>{
+                                currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
+                            }</p>
+                        </div>
+                    </div>}
                     <a href="#"><input className='signup' type="button" value='SignUp' /></a>
                     <a href="#"><img className="shopping-cart" src="src/img/Shopping-Cart-icon.png" alt="" /></a>
                 </div>
             </div>
             <hr />
         </section>
-=======
-                    <a href="#" className="btn">Login</a>
-                    <a href="#" className="btn">Sign up</a>
-                    <a href="#"><img className="shopping-cart" src="src/img/shopping-cart_white.svg" alt="" /></a>
-                </div>
-            </div>
-        </>
->>>>>>> Stashed changes
+
     )
 }
 
