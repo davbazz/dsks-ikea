@@ -14,7 +14,7 @@ function Header() {
     }
 
     return (
-        <section>
+                <section>
             <div className="nav">
                 <input type="checkbox" id="nav-check" />
                 <div className="nav-header">
