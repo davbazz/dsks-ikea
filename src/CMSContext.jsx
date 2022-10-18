@@ -10,8 +10,8 @@ const CMSContextProvider = (props) => {
 
   useEffect(() => {
     const client = createClient({
-      space: "bf9doewl92di",
-      accessToken: "SwOEVmSrIMdvgsTNt1MCBwzj6tp3Y9ZACPYPMwEyRe8",
+      space: import.meta.env.VITE_spaceID,
+      accessToken: import.meta.env.VITE_accessToken,
       host: "preview.contentful.com"
     });
     client.getEntries({
