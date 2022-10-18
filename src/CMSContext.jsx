@@ -15,9 +15,13 @@ const CMSContextProvider = (props) => {
       host: "preview.contentful.com"
     });
     client.getEntries({
-      content_type: 'products', // <<<<< dynamically get content based on type
+      content_type: 'products',// <<<<< dynamically get content based on type
       select: "fields"
-    }).then(response => setProducts(response.items));
+    }).then(response => setProducts(response.items))
+    client.getEntries({
+      content_type: 'cards',// <<<<< dynamically get content based on type
+      select: "fields"
+    }).then(response => setCards(response.items))
   }, []);
 
 
