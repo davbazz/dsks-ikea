@@ -45,7 +45,7 @@ function Header() {
                     <a onClick={() => toggleShow(!show)} className='btn'>Login</a>
                     {show && <div id="myModal" class="modal">
                         <div class="modal-content">
-                            <span class="close">&times;</span>
+                            <span onClick={() => toggleShow(!show)} class="close">&times;</span>
                             <p>{
                                 currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
                             }</p>
