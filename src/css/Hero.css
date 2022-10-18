@@ -1,0 +1,7 @@
+#hero-section {
+    background-image: url('src/img/hero-4.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding: 15rem 0;
+}

@@ -8,11 +8,27 @@ import './App.css'
 
 function App() {
 	return (
+<<<<<<< Updated upstream
 		<div className="App">
 			<Header />
 			<Hero />
 			<Carousel />
 			<Categories />
+=======
+		<div>
+			<div>
+				<Header />
+			</div>
+			<div>
+				<Hero />
+			</div>
+			<div className="wrapper padding-top">
+				<Carousel />
+			</div>
+			<div className="wrapper padding-top">
+				<Categories />
+			</div>
+>>>>>>> Stashed changes
 			<Footer />
 		</div>
 	)

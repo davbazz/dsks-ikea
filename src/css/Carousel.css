@@ -1,39 +1,3 @@
-/* ----- */
-/* reset */
-/* ----- */
-
-:root {
-    font: 21px/1.4 'Noto Sans', Helvetica, sans-serif; /* 20 * 1.2 = 24px */
-}
-
-body,
-body * {
-    margin: unset;
-    box-sizing: unset;
-    padding: unset;
-    font-size: unset;
-    color: unset;
-    text-decoration: unset;
-}
-
-figure * { display: block; }
-
-
-/* ----- */
-/* fonts */
-/* ----- */
-
-/* rem references the 21px in :root */
-h1 { font: 700 2rem/1.2 "Noto Sans"; color:hsl(200, 100%, 10%) } 
-h2 { font: 700 1.35rem/1.2 "Noto Sans"; color:hsl(200, 100%, 10%, .8) }
-h3 { font: 700 1.0rem/1.2 "Noto Sans"; color:hsla(200, 100%, 10%, .7) }
-p { font: 400 0.9rem/1.4 "Noto Sans"; color:hsla(200, 100%, 10%, .8) }
-
-a:hover.link-yellow {box-shadow: inset 0 -0.4em hsl(51, 97%, 53%);}
-
-@media (min-width: 45em) { :root { font-size: 18px; } }
-@media (min-width: 65em) { :root { font-size: 21px; } }
-
 
 /* ----- */
 /* carousel */

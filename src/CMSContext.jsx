@@ -17,7 +17,7 @@ const CMSContextProvider = (props) => {
     client.getEntries({
       content_type: 'products', // <<<<< dynamically get content based on type
       select: "fields"
-    }).then(response => setProducts(response.items))
+    }).then(response => setProducts(response.items));
   }, []);
 
 

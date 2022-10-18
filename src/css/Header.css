@@ -68,6 +68,11 @@ ul {
     width: 35px;
 }
 
+.nav {
+    background-color: hsla(209, 100%, 14%, .9);
+    padding: 1rem 0;
+}
+
 .nav>.nav-header {
     display: inline;
 }
@@ -96,8 +101,6 @@ ul {
     color: #000;
     cursor: pointer;
 }
-
-.nav>.nav-links>a:hover {}
 
 .nav>#nav-check {
     display: none;

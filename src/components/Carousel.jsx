@@ -4,11 +4,10 @@ import "../css/Carousel.css";
 
 function Carousel() {
     const { products } = useContext(CMSContext);
-    console.log(products)
+    // console.log(products)
 
     return (
         <section>
-            <h2>Products</h2>
             <div className="productCarousel">
                 {products.map(p => <div className="productCard" key={p.sys.id}>
                     <h3>{p.fields.productName}</h3>
