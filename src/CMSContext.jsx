@@ -4,9 +4,8 @@ import { createClient } from "contentful";
 export const CMSContext = createContext();
 
 const CMSContextProvider = (props) => {
-  const [getCategories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
-  const [cards, setCards] = useState([]);
 
   useEffect(() => {
     const client = createClient({
@@ -15,22 +14,26 @@ const CMSContextProvider = (props) => {
       host: "preview.contentful.com"
     });
     client.getEntries({
-      content_type: 'products', // <<<<< dynamically get content based on type
+      content_type: 'products',// <<<<< dynamically get content based on type
       select: "fields"
-    }).then(response => setProducts(response.items));
+    }).then(response => setProducts(response.items))
+    client.getEntries({
+      /*CATEGORIES*/content_type: 'cards',// <<<<< dynamically get content based on type
+      select: "fields"
+    }).then(response => setCategories(response.items))
   }, []);
 
+  useEffect(()=>{
+    console.log({categories, products})
+  },[categories, products])
 
   return (
     <CMSContext.Provider
       value={{
-        test: true,
-        getCategories,
+        categories,
         setCategories,
         products,
         setProducts,
-        cards,
-        setCards
       }}
     >
       {props.children}

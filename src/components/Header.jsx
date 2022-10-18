@@ -23,7 +23,7 @@ function Header() {
                     </div>
                 </div>
                 <div className="nav-btn">
-                    <label for="nav-check">
+                    <label htmlFor="nav-check">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -33,10 +33,15 @@ function Header() {
                     <a className='dropdown'>
                         <span>Products</span>
                         <div className="dropdown-content">
-                            {products.map(p => <div className="productCard" key={p.sys.id}>
-                                <h3>{p.fields.productName}</h3>
-
-                            </div>)}
+                            <ul>
+                                <li>Furniture</li>
+                                <li>Textiles</li>
+                                <li>Decoration</li>
+                                <li>Lighting</li>
+                                <li>Kitchen & appliances</li>
+                                <li>Smart home</li>
+                                <li>Beds & mattresses</li>
+                            </ul>
                         </div>
                     </a>
                     <a>Offers</a>
