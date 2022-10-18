@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="row">
           <div className="col">
             <h4>Join IKEA Family</h4>
-            <p>Get exclusive offers, inspiration, and <br></br>
-              lots more to help bring your ideas to <br></br>
+            <p className="white">Get exclusive offers, inspiration, and<br></br>
+              lots more to help bring your ideas to
               life. All for free.</p>
             <a className="btn">Join or Log in</a>
           </div>
