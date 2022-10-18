@@ -30,29 +30,33 @@ function Header() {
                     </label>
                 </div>
                 <div className="nav-links">
-                    <a className='dropdown'>
-                        <span>Products</span>
-                        <div className="dropdown-content">
-                            {products.map(p => <div className="productCard" key={p.sys.id}>
-                                <h3>{p.fields.productName}</h3>
+                    <div className="nav-left">
+                        <a className='dropdown'>
+                            <span>Products</span>
+                            <div className="dropdown-content">
+                                {products.map(p => <div className="productCard" key={p.sys.id}>
+                                    <h3>{p.fields.productName}</h3>
 
-                            </div>)}
-                        </div>
-                    </a>
-                    <a>Offers</a>
-                    <a>Best Seller</a>
-                    <a href="#"><input id='search' type="text" placeholder="Search" /></a>
-                    <a onClick={() => toggleShow(!show)} className='btn'>Login</a>
-                    {show && <div id="myModal" class="modal">
-                        <div class="modal-content">
-                            <span onClick={() => toggleShow(!show)} class="close">&times;</span>
-                            <p>{
-                                currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
-                            }</p>
-                        </div>
-                    </div>}
-                    <a href="#" className='btn'>Sign Up</a>
-                    <a href="#"><img className="shopping-cart" src="src/img/shopping-cart_white.svg" alt="" /></a>
+                                </div>)}
+                            </div>
+                        </a>
+                        <a>Offers</a>
+                        <a>Best Seller</a>
+                    </div>
+                    <div className="nav-right">
+                        <a href="#"><input id='search' type="text" placeholder="Search" /></a>
+                        <a onClick={() => toggleShow(!show)} className='btn'>Login</a>
+                        {show && <div id="myModal" class="modal">
+                            <div class="modal-content">
+                                <span onClick={() => toggleShow(!show)} class="close">&times;</span>
+                                <p>{
+                                    currentForm === "login" ? <Login onFormSwitch={toggleForm} /> : <Register onFormSwitch={toggleForm} />
+                                }</p>
+                            </div>
+                        </div>}
+                        <a href="#" className='btn'>Sign Up</a>
+                        <a href="#"><img className="shopping-cart" src="src/img/shopping-cart_white.svg" alt="" /></a>
+                    </div>
                 </div>
             </div>
         </section>

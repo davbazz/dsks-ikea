@@ -1,6 +1,5 @@
 .logo {
-    width: 50px;
-    margin-top: 15px;
+    width: 100px;
 }
 
 ul {
@@ -70,18 +69,22 @@ ul {
 }
 
 .nav {
+    display: flex;
+    justify-content: space-around;
     background-color: hsla(209, 100%, 14%, .9);
     padding: 1rem 0;
 }
 
+.nav >* {
+    justify-content: space-between;
+}
+
 .nav>.nav-header {
-    display: inline;
+    display: inline-flex;
 }
 
 .nav>.nav-header>.nav-title {
     display: inline-block;
-    font-size: 22px;
-    color: #000;
     padding: 10px;
 }
 
@@ -90,17 +93,27 @@ ul {
 }
 
 .nav>.nav-links {
-    display: inline;
-    float: none;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
     color: white;
-    margin-left: 50px;
+    width: 80%;
+    padding-top: 0.5rem;
+}
+
+.nav-right, .nav-left {
+    display: flex;
+    align-items: space-between;
+}
+
+.nav-right>*, .nav-left>* {
+    padding: 0 .5rem;
 }
 
 .nav>.nav-links>a {
-    display: inline-block;
-    text-decoration: none;
+    display: inline-flex;
+    text-decoration: none;   
     cursor: pointer;
-    padding: 10px 13px;
 }
 
 .nav>#nav-check {
@@ -185,6 +198,15 @@ ul {
         margin-left: 0;
     }
 
+    .nav-right, .nav-left {
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+
+    .nav-right>* {
+        margin-bottom: 0.5rem;
+    }
+
     .nav>.nav-btn {
         display: inline-block;
         position: absolute;
@@ -200,11 +222,6 @@ ul {
         margin-top: 15px;
     }
 
-    .nav>.nav-btn>label:hover,
-    .nav #nav-check:checked~.nav-btn>label {
-        background-color: #000;
-    }
-
     .nav>.nav-btn>label>span {
         display: block;
         width: 25px;
@@ -216,8 +233,7 @@ ul {
         position: absolute;
         display: block;
         width: 100%;
-        background-color: #fff;
-        height: 0px;
+        background-color: hsla(209, 100%, 14%, 1);
         transition: all 0.3s ease-in;
         overflow-y: hidden;
         top: 66px;
