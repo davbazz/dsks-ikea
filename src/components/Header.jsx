@@ -35,16 +35,14 @@ function Header() {
                         <div className="dropdown-content">
                             {products.map(p => <div className="productCard" key={p.sys.id}>
                                 <h3>{p.fields.productName}</h3>
-                                <a href="#"><img src={p.fields.productPicture.fields.file.url} />
-                                    <p>{p.fields.productDescription}</p>
-                                </a>
+
                             </div>)}
                         </div>
                     </a>
                     <a>Offers</a>
                     <a>Best Seller</a>
                     <a href="#"><input id='search' type="text" placeholder="Search" /></a>
-                    <input onClick={() => toggleShow(!show)} className='login' type="button" value='LogIn' />
+                    <a onClick={() => toggleShow(!show)} className='btn'>Login</a>
                     {show && <div id="myModal" class="modal">
                         <div class="modal-content">
                             <span class="close">&times;</span>
@@ -53,11 +51,10 @@ function Header() {
                             }</p>
                         </div>
                     </div>}
-                    <a href="#"><input className='signup' type="button" value='SignUp' /></a>
-                    <a href="#"><img className="shopping-cart" src="src/img/Shopping-Cart-icon.png" alt="" /></a>
+                    <a href="#" className='btn'>Sign Up</a>
+                    <a href="#"><img className="shopping-cart" src="src/img/shopping-cart_white.svg" alt="" /></a>
                 </div>
             </div>
-            <hr />
         </section>
 
     )
