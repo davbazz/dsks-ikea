@@ -1,6 +1,56 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Noto Sans', sans-serif;
+/* ----- */
+/* reset */
+/* ----- */
+
+:root {
+  font: 21px/1.4 'Noto Sans', Helvetica, sans-serif; 
+}
+
+body,
+body * {
+  margin: unset;
+  box-sizing: unset;
+  padding: unset;
+  font-size: unset;
+  color: unset;
+  text-decoration: unset;
+}
+
+figure * { display: block; }
+
+
+/* ----- */
+/* fonts */
+/* ----- */
+
+/* rem references the 21px in :root */
+h1 { font: 700 2rem/1.2 "Noto Sans"; color:hsl(209, 100%, 14%) } 
+h2 { font: 700 1.35rem/1.2 "Noto Sans"; color:hsla(209, 100%, 14%, .8) }
+h3 { font: 700 1.0rem/1.2 "Noto Sans"; color:hsla(209, 100%, 14%, .7) }
+p { font: 400 0.9rem/1.4 "Noto Sans"; color:hsla(209, 100%, 14%, .8) }
+
+a:hover.link-yellow {box-shadow: inset 0 -0.4em hsl(51, 97%, 53%);}
+
+@media (min-width: 45em) { :root { font-size: 18px; } }
+@media (min-width: 65em) { :root { font-size: 21px; } }
+
+.padding-top {
+  padding-top: 3rem;
+}
+
+.wrapper {
+  width: 100vw;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.btn{ 
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(200, 100%, 10%);
+  font-weight: 700;
+  background-color: hsl(51, 97%, 53%);
+  padding: 0.3em 1.25em; /* relative to font-size p */
+  border-radius: 2rem;
+  cursor: pointer;
 }

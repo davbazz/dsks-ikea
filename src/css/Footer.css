@@ -1,17 +1,11 @@
-
 .main-footer{ 
-    color:black;
-    background-color: rgb(163, 162, 162) ;
+    color:white;
+    background-color: hsla(200, 100%, 10%, .8);
     padding: 3rem 1.5rem;
     display: flex;
     justify-content: center;
 }
-button{ 
-    background-color: black;
-    color: white;
-    border-radius: 5% ;
-    
-}
+
 .row{ 
     display:flex;
     justify-content: center;

@@ -19,7 +19,7 @@ function Header() {
                 <input type="checkbox" id="nav-check" />
                 <div className="nav-header">
                     <div className="nav-title">
-                        <img className="logo" src="src/img/logo.png" alt="the website logo" />
+                        <img className="logo" src="public/dsks-logo.svg" alt="the website logo" />
                     </div>
                 </div>
                 <div className="nav-btn">
@@ -44,6 +44,7 @@ function Header() {
                     <a>Offers</a>
                     <a>Best Seller</a>
                     <a href="#"><input id='search' type="text" placeholder="Search" /></a>
+<<<<<<< Updated upstream
                     <input onClick={() => toggleShow(!show)} className='login' type="button" value='LogIn' />
                     {show && <div id="myModal" class="modal">
                                     <div class="modal-content">
@@ -59,6 +60,14 @@ function Header() {
             </div>
             <hr />
         </section>
+=======
+                    <a href="#" className="btn">Login</a>
+                    <a href="#" className="btn">Sign up</a>
+                    <a href="#"><img className="shopping-cart" src="src/img/shopping-cart_white.svg" alt="" /></a>
+                </div>
+            </div>
+        </>
+>>>>>>> Stashed changes
     )
 }
 
