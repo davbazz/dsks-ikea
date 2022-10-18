@@ -33,12 +33,6 @@ function Header() {
                     <a className='dropdown'>
                         <span>Products</span>
                         <div className="dropdown-content">
-<<<<<<< HEAD
-                            {products.map(p => <div className="productCard" key={p.sys.id}>
-                                <h3>{p.fields.productName}</h3>
-
-                            </div>)}
-=======
                             <ul>
                                 <li>Furniture</li>
                                 <li>Textiles</li>
@@ -48,7 +42,6 @@ function Header() {
                                 <li>Smart home</li>
                                 <li>Beds & mattresses</li>
                             </ul>
->>>>>>> added images
                         </div>
                     </a>
                     <a>Offers</a>

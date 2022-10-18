@@ -1,50 +1,60 @@
+
+// showcase of products filtered by category
+
 import React, { useContext } from 'react';
+import { useState } from 'react';
 import { CMSContext } from '../CMSContext';
-import "../css/Cards.css"
+import "../css/Categories.css"
 
 function Categories() {
-    const getCategories = useContext(CMSContext);
-    console.log(getCategories)
+    const {categories} = useContext(CMSContext);
+    const [activeCategory, setActiveCategory] = useState('All')
+    
+    // function retArrOfStuff() {
+    //     return [54311234234, "hello", function(){console.log(new Date())}]
+    // }
+    // const allThatStuff = retArrOfStuff()
+    // const [qowdijqwoidjqwdoj, str, func] = retArrOfStuff()
+    // console.log(qowdijqwoidjqwdoj, str, func)
+    // you can A) store "state" (information) in the URL 
+    // you can B) store "state" (information) in a variable
+    // different kinds of state can be local, if they're not that serious
+    // like a dropdown or a presentational state ( like a carousel image index position)
+
+    // console.log(categories.map(cat => cat.fields.category))
     return (
-        <section className="cards">
+        <section className="categories">
             <h2 className="cards_header">
                 More ideas and inspiration from your great value furniture store
             </h2>
-            <CardsCategory />
-            <CardsSection />
+            
+            <div className='cards_categories'>
+                {[  
+                    "All",
+                    "Bedroom",
+                    "Living Room",
+                    "Kitchen",
+                    "Workspace",
+                    "Outdoor",
+                    "Bathroom",
+                    "Baby & Children",
+                    "Dining",
+                    "Halway",
+                ].map(cat => <div key={cat} onClick={()=>setActiveCategory(cat)} className="cards_category_link">{cat}</div>)}
+            </div>
+            
+            <div className="categoryCards">
+                {categories
+                .filter(cat => cat.fields.category === activeCategory)
+                .map(cat => {
+                    console.log(cat)
+                    return  <div className="categoryCard" key={cat.sys.id}>   
+                                <a href="#"><img src={cat.fields.path} /></a>
+                            </div>
+                })}
+            </div>
         </section>
     )
 }
 
 export default Categories
-
-function CardsCategory() {
-    return (
-        <div className='cards_categories'>
-            <div className="cards_category_link">All</div>
-            <div className="cards_category_link">Bedroom</div>
-            <div className="cards_category_link">Living Room</div>
-            <div className="cards_category_link">Kitchen </div>
-            <div className="cards_category_link">Workspace</div>
-            <div className="cards_category_link">Outdoor</div>
-            <div className="cards_category_link">Bathroom</div>
-            <div className="cards_category_link">Baby & Children</div>
-            <div className="cards_category_link">Dining</div>
-            <div className="cards_category_link">Halway</div>
-            <div className="cards_category_link">Laundry</div>
-            <div className="cards_category_link">Bundles</div>
-        </div>
-    )
-}
-
-function CardsSection() {
-    const { cards } = useContext(CMSContext);
-    
-    return (
-        <div className="categoryCards">
-            {cards.map(c => <div className="categoryCard" key={c.sys.id}>   
-                <a href="#"><img src={c.fields.path} /></a>
-            </div>)}
-        </div>
-    )
-}
